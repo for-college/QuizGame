@@ -10,18 +10,20 @@ namespace QuizGame
     /// </summary>
     public partial class Game : Window
     {
-        public Controller controller;
-        public View view; // Представление игры
-        public WordImageMap wordImageMap; // Карта соответствия слов и изображений
-
-
-        public int iconCount = 3; // Количество иконок по умолчанию
-
         public Game()
         {
             InitializeComponent();
-            controller = new Controller(new Model(), wordImageMap, view, iconCount);
+
+            GameInitializer gameInitializer = new GameInitializer(this); // Инициализация игры
+            gameInitializer.Initialize();
+
+            AnswerTextBox.PreviewTextInput += AnswerTextBox_PreviewTextInput;
         }
+
+        public Controller controller; // Контроллер игры
+        public View view; // Представление игры
+
+        public int iconCount = 3; // Количество иконок по умолчанию
 
         private void SubmitAnswerButton_Click(object sender, RoutedEventArgs e)
         {

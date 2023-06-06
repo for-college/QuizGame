@@ -3,8 +3,8 @@
     public class QuizData
     {
         public string[] Questions { get; } = {
-            "Белая [my]",
-            "Белая [my]",
+            "Белая фыв фыв фыв фыв фыв фыв фыв [my]",
+            "Белая фыв фыв фыв фыв фыв фыв фыв[my]",
             "Белая [my]",
         };
 
