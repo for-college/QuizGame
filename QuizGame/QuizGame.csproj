@@ -65,7 +65,7 @@
     <Compile Include="Datas\Question.cs" />
     <Compile Include="Datas\QuizData.cs" />
     <Compile Include="Game\GameStats.cs" />
-    <Compile Include="Rules.xaml.cs">
+    <Compile Include="Rules\Rules.xaml.cs">
       <DependentUpon>Rules.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVC\View.cs" />
@@ -86,7 +86,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Rules.xaml">
+    <Page Include="Rules\Rules.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
