@@ -6,7 +6,20 @@ internal static class Dictionary
     // Пояснение: если лимит по кол-ву картинок в тексте, то слова для картинок необходимо перевести
     private static readonly Dictionary<string, string> wordPairs = new Dictionary<string, string>()
     {
-        { "birch", "береза" },
+        { "you", "твоя" },
+        { "web", "сеть" },
+        { "carry", "несет" },
+        { "enemy", "врагам" },
+        { "death", "гибель" },
+
+        { "star", "звезда" },
+        { "shine", "светит" },
+        { "bright", "ярко" },
+
+        { "win", "победы" },
+        { "one", "один" },
+        { "fight", "бой" },
+        { "us", "нас" },
     };
     // С помощью TryGetValue находим пару и переводим
     public static string TranslateWord(string englishWord)

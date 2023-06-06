@@ -46,7 +46,7 @@ namespace QuizGame
                 }
 
                 // Обновление значения iconCount в контроллере
-                controller?.UpdateIconCount(iconCount);
+                QuizData.IconsCount = iconCount;
             }
         }
     }

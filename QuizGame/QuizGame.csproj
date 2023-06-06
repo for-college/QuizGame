@@ -118,7 +118,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Resource Include="Images\bright.png" />
+    <Resource Include="Images\shine.png" />
+    <Resource Include="Images\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\carry.png" />
+    <Resource Include="Images\death.png" />
+    <Resource Include="Images\enemy.png" />
+    <Resource Include="Images\web.png" />
+    <Resource Include="Images\you.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\fight.png" />
+    <Resource Include="Images\one.png" />
+    <Resource Include="Images\us.png" />
+    <Resource Include="Images\win.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

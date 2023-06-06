@@ -27,7 +27,7 @@ namespace QuizGame
 
             View view = new View(mainWindow);
 
-            Controller controller = new Controller(model, wordImageMap, view, iconCount);
+            Controller controller = new Controller(model, wordImageMap, view);
 
             mainWindow.controller = controller;
             mainWindow.view = view;

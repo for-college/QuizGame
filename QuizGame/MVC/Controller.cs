@@ -13,18 +13,17 @@ namespace QuizGame
 
         public readonly GameStats gameStats; // Статистика игры
 
-        private int iconCount; // Количество иконок
+        private int iconCount = QuizData.IconsCount; // Количество иконок
         private TimeSpan countdownTime;
         private readonly DispatcherTimer countdownTimer;
 
-        private bool isFirstQuestionAnswered = false;
+        private int currentAnswer = 0;
 
-        public Controller(Model model, WordImageMap wordImageMap, View view, int iconCount)
+        public Controller(Model model, WordImageMap wordImageMap, View view)
         {
             this.model = model;
             this.wordImageMap = wordImageMap;
             this.view = view;
-            this.iconCount = iconCount;
 
             gameStats = new GameStats
             {
@@ -51,10 +50,11 @@ namespace QuizGame
                 };
                 wordImageMap.ReplaceWordsWithImages(sentences, view.QuestionTextBlock, iconCount);
 
-                if (isFirstQuestionAnswered)
+                if (currentAnswer == 0)
                 {
                     countdownTime = GetCountdownTime();
                     countdownTimer.Start();
+                    currentAnswer++;
                 }
             }
             else
@@ -121,13 +121,6 @@ namespace QuizGame
 
             if (currentQuestion != null)
             {
-                if (!isFirstQuestionAnswered)
-                {
-                    isFirstQuestionAnswered = true;
-                    countdownTime = GetCountdownTime();
-                    countdownTimer.Start();
-                }
-
                 if (answer.Equals(currentQuestion.Answer, StringComparison.OrdinalIgnoreCase))
                 {
                     gameStats.UpdateCorrectAnswers();
